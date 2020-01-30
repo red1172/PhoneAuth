@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import * as admin from 'firebase-admin';
-
+import { WindowService } from '../window.service';
+import * as firebase from 'firebase';
+import { PhoneNumber } from '../phone-number';
+import { Router } from '@angular/router';
 
 
 
@@ -9,22 +11,20 @@ import * as admin from 'firebase-admin';
   templateUrl: './profil.component.html',
   styleUrls: ['./profil.component.scss']
 })
-// tslint:disable-next-line: prefer-const
+
 
 
 export class ProfilComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
-    admin.auth().getUser(uid)
-    .then(function(userRecord) {
-      // See the UserRecord reference doc for the contents of userRecord.
-      console.log('Successfully fetched user data:', userRecord.toJSON());
-    })
-    .catch(function(error) {
-      console.log('Error fetching user data:', error);
-    });
+    const user = firebase.auth().currentUser;
+    if (user.uid) {
+        this.router.navigate(['/accueil']);
+    } else {
+        // No user is signed in.
+      }
+    }
   }
 
-}
