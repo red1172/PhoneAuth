@@ -23,6 +23,7 @@
     "@ng-bootstrap/ng-bootstrap": "^5.2.1",
     "firebase": "^7.7.0",
     "firebase-admin": "^8.9.2",
+    "firebaseui": "^4.4.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"

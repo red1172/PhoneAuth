@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import * as admin from 'firebase-admin';
 
 
+
+
 @Component({
   selector: 'app-profil',
   templateUrl: './profil.component.html',
