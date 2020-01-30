@@ -1,0 +1,27 @@
+<ul ngbNav #nav="ngbNav" activeId="1" class="nav-tabs justify-content-center">
+  <li ngbNavItem="1">
+    <a ngbNavLink><b>Accueil</b></a>
+
+  </li>
+  <li ngbNavItem="2">
+    <a ngbNavLink><b>Fancy title</b></a>
+
+  </li>
+  <li ngbDropdown class="nav-item">
+    <a href (click)="false" class="nav-link" ngbDropdownToggle><b>Dropdown</b></a>
+    <div ngbDropdownMenu>
+      <button ngbDropdownItem><b>Action</b></button>
+      <button ngbDropdownItem><b>Another action</b></button>
+      <button ngbDropdownItem><b>Something else here</b></button>
+      <div class="dropdown-divider"></div>
+      <button ngbDropdownItem>Separated link</button>
+    </div>
+  </li>
+  <li ngbNavItem="3" class="ml-auto">
+    <a ngbNavLink (click)="signOutUser()"><b>Déconnexion</b></a>
+
+  </li>
+</ul>
+
+
+<div ngbNavOutlet="nav" class="mt-2"></div>
