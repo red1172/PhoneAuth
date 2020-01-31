@@ -23,7 +23,7 @@ export class ProfilComponent implements OnInit {
     if (user.uid) {
         this.router.navigate(['/accueil']);
     } else {
-        // No user is signed in.
+        //
       }
     }
   }
