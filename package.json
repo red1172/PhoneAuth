@@ -22,7 +22,7 @@
     "@angular/router": "~8.2.14",
     "@ng-bootstrap/ng-bootstrap": "^5.2.1",
     "firebase": "^7.7.0",
-    "firebase-admin": "^8.9.2",
+    "firebase-admin": "^11.8.0",
     "firebaseui": "^4.4.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
